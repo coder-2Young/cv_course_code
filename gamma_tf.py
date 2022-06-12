@@ -1,6 +1,9 @@
 import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+
 #分道计算每个通道的直方图
-img0 = cv2.imread('image1.jpepg')
+img0 = cv2.imread('image1.jpeg')
 hist_b = cv2.calcHist([img0],[0],None,[256],[0,256])
 hist_g = cv2.calcHist([img0],[1],None,[256],[0,256])
 hist_r = cv2.calcHist([img0],[2],None,[256],[0,256])
